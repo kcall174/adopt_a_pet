@@ -1,6 +1,3 @@
-#! python3 
-# Adopt a Pet app.py - use pythons flask framework to create a simple pet adoption site that contains multiple routes. 
-
 from flask import Flask
 
 app = Flask(__name__)
@@ -14,6 +11,9 @@ def index():
   <li><a href ="/animals/dogs"Dogs</li>
   <li><a href ="/animals/cats"Cats</li>
   <li><a href ="/animals/rabbits"</li>
+  <li>Dogs</li>
+  <li>Cats</li>
+  <li>Rabbits</li>
   </ul>
   '''
 @app.route('/animals/<pet_type>')
