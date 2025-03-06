@@ -20,8 +20,9 @@ def animals(pet_type):
     html = f"<h1>List of {pet_type.capitalize()}</h1>"
     html += "<ul>"
 
-    for pet in pets[pet_type]:
-        html += f"<li>{pet['name']}</li>"
+    for idx, pet in enumerate(pets[pet_type]):
+      html += f'<li><a href="/animals/{pet_type}/{idx}">{pet["name"]}</a></li>'
+
 
     html += "</ul>"
     return html
@@ -30,3 +31,8 @@ def animals(pet_type):
 def pet(pet_type, pet_id):
   pet = pets[pet_type][pet_id]
   print(pet)
+
+
+
+
+  
